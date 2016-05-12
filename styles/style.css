@@ -23,16 +23,6 @@
   text-decoration: none;
 }
 
-#popUp.loader {
-  background-image: url(../images/ajax_loader.gif);
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-#popUp.loader .container {
-  display: none;
-}
-
 #popUp .container {
   margin-top: 80px;
 }
@@ -64,6 +54,9 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  outline:solid;
+  outline-width: 6px;
+  outline-color: #ccc;
 }
 
 header h1 {
@@ -73,6 +66,8 @@ header h1 {
   width: 16%;
   float: left;
   padding-left: 0;
+  
+
 }
 
 /* Header navigation bar */
@@ -87,11 +82,11 @@ header nav {
   vertical-align: middle;
 }
 
-/* Search bar */
+/* Search bar 
 header #search {
   width: 20px;
   height: 20px;
-  position: absolute;
+  /*position: absolute;
   right: 20px;
   top: 10px;
 }
@@ -101,30 +96,39 @@ header #search a {
   width: 100%;
   padding: 10px;
 }
+*/
+
 
 header #search a:hover {
   background: #CC0020;
+  outline:solid;
 }
 
-header #search img {
-  width: 100%;
-  display: block;
+header #search img, #searchImage {
+  height:30px;
+  width: auto;
+  display: inline-block;
+  
+  
 }
 
-header #search input {
-  position: absolute;
+header #search input, #searchbar {
+  display:inline-block;
   right: 20px;
   /*top: 10px;*/
   padding: 8px 0;
-  width: 0;
-  transition: 0.2s all;
-  visibility: hidden;
+  
+  /*/transition: 0.2s all;*/
+  display:hidden;
+  float:right;
+
+
 }
 
 header #search.active input {
   width: 160px;
-  padding: 8px 10px;
-  visibility: visible;
+  /*padding: 8px 10px;
+  visibility: visible;*/
 }
 
 header #search.active a {
@@ -149,7 +153,7 @@ header nav a:hover {
 nav ul {
 	padding:0;
 	margin:0;
-  margin-right: 30px;
+  margin-right: 0px;
 	list-style: none;
 	position: relative;
 	}
@@ -158,13 +162,15 @@ nav ul li {
 	display:inline-block;
 	background-color: #CC0020;
   position: relative;
+
 }
 
 nav ul ul {
 	display: none;
 	position: absolute;
 	top: 40px;
-  right: -30px;
+  right: 0px;
+  
 }
 
 /* Display Dropdowns on Hover */
@@ -178,6 +184,7 @@ nav ul ul li {
 	float:none;
 	display:list-item;
 	position: relative;
+  
 }
 
 /* Main Section */
@@ -234,4 +241,21 @@ nav ul ul li {
   margin-top: 15px;
   text-align: right;
   color: #097FB2;
+}
+
+#description {
+  display:none;
+}
+
+#emailprompt{
+  display:inline-block;
+}
+
+.middle{
+  text-align: center;
+  margin:0 auto;
+}
+
+#Slower, #Faster, #readRate {
+  display:inline-block;
 }
